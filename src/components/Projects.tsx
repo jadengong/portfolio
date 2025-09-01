@@ -33,7 +33,7 @@ export default function Projects() {
       id: 2,
       title: "Codebox",
       description: "A full-stack code execution sandbox featuring a React frontend and Node.js/Express backend that runs multiple languages (Python, JavaScript, Java, C++) securely in Docker containers.",
-      image: "/project2.jpg",
+      image: "/codebox.jpg",
       technologies: ["React", "Node.js", "Express", "Docker"],
       category: "fullstack",
       github: "https://github.com/jadengong/codebox",
