@@ -44,8 +44,8 @@ export default function Contact() {
         </svg>
       ),
       title: "Email",
-      value: "jaden@example.com",
-      link: "mailto:jaden@example.com"
+      value: "ong.jadengabriel@gmail.com",
+      link: "mailto:ong.jadengabriel@gmail.com"
     },
     {
       icon: (
@@ -55,7 +55,7 @@ export default function Contact() {
         </svg>
       ),
       title: "Location",
-      value: "San Francisco, CA",
+      value: "San Diego, CA",
       link: null
     },
     {
@@ -65,8 +65,8 @@ export default function Contact() {
         </svg>
       ),
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+1 (858) 603-6535",
+      link: "tel:+18586036535"
     }
   ];
 

@@ -1,31 +1,32 @@
 export default function About() {
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "Tech Company",
-      period: "2022 - Present",
-      description: "Led development of scalable web applications using React, Node.js, and cloud technologies."
+      title: "Research Assistant",
+      company: "RTEC Lab @ SDSU",
+      period: "Feb 2025 - Present",
+      description: "Conducting research in real-time embedded systems and autonomous vehicles as part of SDSU’s RTEC Lab. Worked on the F1TENTH autonomous racing platform to develop and test algorithms for intelligent following, static obstacle overtaking, and real-time path planning using ROS 2 and NVIDIA Isaac ROS Visual SLAM. Integrated sensor data (LiDAR, cameras) for perception and localization, and contributed to control system tuning.
+"
     },
     {
-      title: "Frontend Developer",
-      company: "Startup Inc",
-      period: "2020 - 2022", 
-      description: "Built responsive user interfaces and implemented modern design systems."
+      title: "Algorithms Instructional Student Assistant",
+      company: "San Diego State University",
+      period: "Aug 2025 - Present", 
+      description: "Assisting students in the Algorithms (CS460) course by holding office hours, grading assignments and exams."
     },
     {
-      title: "Junior Developer",
-      company: "Digital Agency",
-      period: "2019 - 2020",
-      description: "Developed websites and web applications using various frontend technologies."
+      title: "Vice President",
+      company: "App Development Club @ SDSU",
+      period: "Aug 2024 - Present",
+      description: "Led technical workshops, lectures, and collaborative coding events on React, Vue.js, and Next.js, enabling 20+ members to gain hands-on experience building full-stack applications"
     }
   ];
 
   const education = [
     {
       degree: "Bachelor of Computer Science",
-      school: "University of Technology",
-      period: "2015 - 2019",
-      description: "Focused on software engineering and web development"
+      school: "San Diego State University",
+      period: "2023 - 2027",
+      description: "Focused on systems engineering and software development"
     }
   ];
 
@@ -47,7 +48,7 @@ export default function About() {
                 Who I Am
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                I'm a passionate full-stack developer with over 4 years of experience creating 
+                I'm a passionate developer with over 4 years of experience creating 
                 digital experiences that matter. I believe in writing clean, maintainable code 
                 and building products that users love.
               </p>
