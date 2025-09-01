@@ -9,13 +9,12 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.",
+      title: "DevTrackr",
+      description: "A FastAPI and PostgreSQL-based task management API with JWT authentication, task priorities, time tracking, soft-deletes, and Dockerized deployment with GitHub Actions CI/CD.",
       image: "/project1.jpg",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      category: "fullstack",
-      github: "https://github.com/jadengong/ecommerce",
-      live: "https://ecommerce-demo.com",
+      technologies: ["FastAPI", "PostgreSQL", "Docker", "GitHub Actions"],
+      category: "backend",
+      github: "https://github.com/jadengong/devtrackr",
       featured: true
     },
     {
