@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Jaden Ong - Aspiring Developer",
   description: "Aspiring developer passionate about creating functional, scalable, and user-centered experiences.",
-  keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Python", "Django", "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL", "Docker", "AWS", "Backend Development", "Web Development", "JavaScript", "Database Design", "API Development"],
+  keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Python",  "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "Docker", "Backend Development", "Web Development", "JavaScript", "Database Design", "API Development"],
   authors: [{ name: "Jaden Ong" }],
   creator: "Jaden Ong",
   openGraph: {
