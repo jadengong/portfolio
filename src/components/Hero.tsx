@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -122,7 +121,7 @@ export default function Hero() {
                     <span>developer = {`{`}</span>
                   </div>
                   <div className="ml-4 space-y-1">
-                    <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Gong'</span>,</div>
+                                         <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Ong'</span>,</div>
                     <div><span className="text-blue-500">role:</span> <span className="text-yellow-500">'Full-Stack Developer'</span>,</div>
                     <div><span className="text-blue-500">passion:</span> <span className="text-yellow-500">'Creating amazing experiences'</span></div>
                   </div>
