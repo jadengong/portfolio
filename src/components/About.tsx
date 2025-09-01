@@ -4,8 +4,7 @@ export default function About() {
       title: "Research Assistant",
       company: "RTEC Lab @ SDSU",
       period: "Feb 2025 - Present",
-      description: "Conducting research in real-time embedded systems and autonomous vehicles as part of SDSU’s RTEC Lab. Worked on the F1TENTH autonomous racing platform to develop and test algorithms for intelligent following, static obstacle overtaking, and real-time path planning using ROS 2 and NVIDIA Isaac ROS Visual SLAM. Integrated sensor data (LiDAR, cameras) for perception and localization, and contributed to control system tuning.
-"
+      description: "Conducting research in real-time embedded systems and autonomous vehicles as part of SDSU’s RTEC Lab. Worked on the F1TENTH autonomous racing platform to develop and test algorithms for intelligent following, static obstacle overtaking, and real-time path planning using ROS 2 and NVIDIA Isaac ROS Visual SLAM. Integrated sensor data (LiDAR, cameras) for perception and localization, and contributed to control system tuning."
     },
     {
       title: "Algorithms Instructional Student Assistant",
