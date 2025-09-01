@@ -14,14 +14,14 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Jaden Gong - Full-Stack Developer",
-  description: "Full-stack developer passionate about creating beautiful, functional, and user-centered digital experiences.",
-  keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Web Development"],
-  authors: [{ name: "Jaden Gong" }],
-  creator: "Jaden Gong",
+  title: "Jaden Ong - Aspiring Developer",
+  description: "Aspiring developer passionate about creating functional, scalable, and user-centered experiences.",
+  keywords: ["Full-Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Python", "Django", "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL", "Docker", "AWS", "Backend Development", "Web Development", "JavaScript", "Database Design", "API Development"],
+  authors: [{ name: "Jaden Ong" }],
+  creator: "Jaden Ong",
   openGraph: {
-    title: "Jaden Gong - Full-Stack Developer",
-    description: "Full-stack developer passionate about creating beautiful, functional, and user-centered digital experiences.",
+    title: "Jaden Ong - Full-Stack Developer",
+    description: "Aspiring developer passionate about creating functional, scalable, and user-centered experiences.",
     type: "website",
   },
 };
