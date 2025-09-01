@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Jaden Ong" }],
   creator: "Jaden Ong",
   openGraph: {
-    title: "Jaden Ong - Aspiring Developer",
+    title: "Jaden Ong - Software Developer",
     description: "Aspiring developer passionate about creating functional, scalable, and user-centered experiences.",
     type: "website",
   },
