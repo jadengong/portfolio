@@ -7,10 +7,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Jaden Gong</h3>
+            <h3 className="text-2xl font-bold mb-4">Jaden Ong</h3>
             <p className="text-gray-400 mb-6 max-w-md">
-              Full-stack developer passionate about creating beautiful, functional, 
-              and user-centered digital experiences.
+              Aspiring software developer with a focus on learning modern technologies, writing maintainable code, and solving problems through creativity and collaboration.
             </p>
             <div className="flex space-x-4">
               <a

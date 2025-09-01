@@ -16,7 +16,7 @@ export default function About() {
       title: "Vice President",
       company: "App Development Club @ SDSU",
       period: "Aug 2024 - Present",
-      description: "Led technical workshops, lectures, and collaborative coding events on React, Vue.js, and Next.js, enabling 20+ members to gain hands-on experience building full-stack applications"
+      description: "Led technical workshops, lectures, and collaborative coding events on React, Vue.js, and Next.js, enabling 20+ members to gain hands-on experience building full-stack applications."
     }
   ];
 
@@ -25,7 +25,7 @@ export default function About() {
       degree: "Bachelor of Computer Science",
       school: "San Diego State University",
       period: "2023 - 2027",
-      description: "Focused on systems engineering and software development"
+      description: "Majoring in Computer Science and minoring in Information Systems."
     }
   ];
 
@@ -72,7 +72,7 @@ export default function About() {
                 <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
               </div>
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400">20+</div>
+                <div className="text-3xl font-bold text-green-600 dark:text-green-400">60+</div>
                 <div className="text-gray-600 dark:text-gray-300">Students Helped</div>
               </div>
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">

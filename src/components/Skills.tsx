@@ -3,34 +3,30 @@ export default function Skills() {
     {
       name: "Frontend Development",
       skills: [
-        { name: "React", level: 90, icon: "⚛️" },
-        { name: "Next.js", level: 85, icon: "▲" },
-        { name: "TypeScript", level: 80, icon: "📘" },
-        { name: "Tailwind CSS", level: 90, icon: "🎨" },
-        { name: "HTML/CSS", level: 95, icon: "🌐" },
-        { name: "JavaScript", level: 90, icon: "💛" }
+        { name: "React", icon: "⚛️" },
+        { name: "Next.js", icon: "▲" },
+        { name: "HTML/CSS", icon: "🌐" },
+        { name: "JavaScript", icon: "💛" }
       ]
     },
     {
       name: "Backend Development",
       skills: [
-        { name: "Node.js", level: 85, icon: "🟢" },
-        { name: "Express.js", level: 80, icon: "🚂" },
-        { name: "Python", level: 75, icon: "🐍" },
-        { name: "PostgreSQL", level: 70, icon: "🐘" },
-        { name: "MongoDB", level: 75, icon: "🍃" },
-        { name: "REST APIs", level: 85, icon: "🔌" }
+        { name: "Node.js", icon: "🟢" },
+        { name: "Express.js", icon: "🚂" },
+        { name: "Python", icon: "🐍" },
+        { name: "PostgreSQL", icon: "🐘" },
+        { name: "REST APIs", icon: "🔌" }
       ]
     },
     {
       name: "Tools & Technologies",
       skills: [
-        { name: "Git", level: 90, icon: "📝" },
-        { name: "Docker", level: 70, icon: "🐳" },
-        { name: "AWS", level: 65, icon: "☁️" },
-        { name: "Firebase", level: 80, icon: "🔥" },
-        { name: "Figma", level: 75, icon: "🎨" },
-        { name: "VS Code", level: 95, icon: "💻" }
+        { name: "Git", icon: "📝" },
+        { name: "Docker", icon: "🐳" },
+        { name: "GitHub Actions", icon: "☁️" },
+        { name: "Pytest", icon: "🔥" },
+        { name: "Jest", icon: "🎨" },
       ]
     }
   ];
@@ -44,8 +40,8 @@ export default function Skills() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I've worked with a variety of technologies and tools. Here's a comprehensive 
-            overview of my technical skills and proficiency levels.
+            I&apos;ve worked with a variety of technologies and tools. Here&apos;s a comprehensive 
+            overview of my technical skills and experience.
           </p>
         </div>
 
@@ -62,25 +58,11 @@ export default function Skills() {
                     key={skillIndex}
                     className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="flex items-center mb-4">
+                    <div className="flex items-center">
                       <span className="text-2xl mr-3">{skill.icon}</span>
                       <h4 className="text-lg font-medium text-gray-900 dark:text-white">
                         {skill.name}
                       </h4>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm text-gray-600 dark:text-gray-400">
-                        <span>Proficiency</span>
-                        <span>{skill.level}%</span>
-                      </div>
-                      
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                        <div
-                          className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
                     </div>
                   </div>
                 ))}
@@ -97,9 +79,8 @@ export default function Skills() {
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              "Responsive Design", "UI/UX Design", "Performance Optimization", 
-              "SEO", "Testing", "Agile/Scrum", "Problem Solving", "Team Collaboration",
-              "Code Review", "Documentation", "Continuous Integration", "Microservices"
+              "Communication", "Performance Optimization",  "Testing", "Problem Solving",  "Team Collaboration",
+              "Code Review", "Documentation", "Continuous Adaptability & Learning"
             ].map((skill, index) => (
               <div
                 key={index}
@@ -125,10 +106,10 @@ export default function Skills() {
             
             <div className="flex flex-wrap justify-center gap-4">
               {[
-                { name: "Rust", icon: "🦀" },
-                { name: "GraphQL", icon: "🔷" },
-                { name: "Machine Learning", icon: "🤖" },
-                { name: "Blockchain", icon: "⛓️" }
+                { name: "PostgreSQL", icon: "🐘" },
+                { name: "RESTful APIs", icon: "🔌" },
+                { name: "Node.js", icon: "🟢" },
+                { name: "Express.js", icon: "🚂" }
               ].map((tech, index) => (
                 <div
                   key={index}
