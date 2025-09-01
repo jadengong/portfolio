@@ -6,10 +6,10 @@ import Link from 'next/link';
 export default function Hero() {
   const [currentText, setCurrentText] = useState(0);
   const texts = [
-    "Full-Stack Developer",
-    "UI/UX Designer", 
+    "Software Developer",
+    "Computer Science Student", 
     "Problem Solver",
-    "Creative Thinker"
+    "Team Collaborator"
   ];
 
   useEffect(() => {
@@ -122,8 +122,8 @@ export default function Hero() {
                   </div>
                   <div className="ml-4 space-y-1">
                                          <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Ong'</span>,</div>
-                    <div><span className="text-blue-500">role:</span> <span className="text-yellow-500">'Full-Stack Developer'</span>,</div>
-                    <div><span className="text-blue-500">passion:</span> <span className="text-yellow-500">'Creating amazing experiences'</span></div>
+                    <div><span className="text-blue-500">role:</span> <span className="text-yellow-500">'Aspiring Software Developer'</span>,</div>
+                    <div><span className="text-blue-500">passion:</span> <span className="text-yellow-500">'Always trying to get better'</span></div>
                   </div>
                   <div>{`}`};</div>
                 </div>

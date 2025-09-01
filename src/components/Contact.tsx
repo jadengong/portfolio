@@ -57,17 +57,8 @@ export default function Contact() {
       title: "Location",
       value: "San Diego, CA",
       link: null
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
-      title: "Phone",
-      value: "+1 (858) 603-6535",
-      link: "tel:+18586036535"
     }
+    
   ];
 
   return (
@@ -174,10 +165,7 @@ export default function Contact() {
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
                 Contact Information
               </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm currently available for freelance work and full-time opportunities. 
-                Let's discuss how we can work together!
-              </p>
+              
             </div>
 
             <div className="space-y-6">
