@@ -3,10 +3,22 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  category: 'frontend' | 'backend' | 'fullstack' | string;
+  github: string;
+  featured: boolean;
+  live?: string;
+};
+
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "DevTrackr",
@@ -19,58 +31,13 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      title: "Codebox",
+      description: "A full-stack code execution sandbox featuring a React frontend and Node.js/Express backend that runs multiple languages (Python, JavaScript, Java, C++) securely in Docker containers.",
       image: "/project2.jpg",
-      technologies: ["React", "Firebase", "Tailwind CSS"],
-      category: "frontend",
-      github: "https://github.com/jadengong/task-app",
-      live: "https://task-app-demo.com",
-      featured: true
-    },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "A beautiful weather application that displays current weather and forecasts using OpenWeatherMap API with location-based services.",
-      image: "/project3.jpg",
-      technologies: ["JavaScript", "HTML", "CSS", "API"],
-      category: "frontend",
-      github: "https://github.com/jadengong/weather-app",
-      live: "https://weather-demo.com",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Blog Platform",
-      description: "A modern blog platform built with Next.js and Sanity CMS. Features include markdown support, SEO optimization, and responsive design.",
-      image: "/project4.jpg",
-      technologies: ["Next.js", "Sanity CMS", "Tailwind CSS"],
+      technologies: ["React", "Node.js", "Express", "Docker"],
       category: "fullstack",
-      github: "https://github.com/jadengong/blog-platform",
-      live: "https://blog-demo.com",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website showcasing projects and skills with modern design and smooth animations.",
-      image: "/project5.jpg",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      category: "frontend",
-      github: "https://github.com/jadengong/portfolio",
-      live: "https://portfolio-demo.com",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "API Service",
-      description: "A RESTful API service for managing user data with authentication, rate limiting, and comprehensive documentation.",
-      image: "/project6.jpg",
-      technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
-      category: "backend",
-      github: "https://github.com/jadengong/api-service",
-      live: "https://api-demo.com",
-      featured: false
+      github: "https://github.com/jadengong/codebox",
+      featured: true
     }
   ];
 
@@ -168,14 +135,16 @@ export default function Projects() {
                   >
                     GitHub
                   </a>
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-                  >
-                    Live Demo
-                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
