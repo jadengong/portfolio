@@ -61,22 +61,22 @@ export default function About() {
               </p>
             </div>
 
-            {/* Personal Stats */}
+            {/* Student Stats */}
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">4+</div>
-                <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">3.95</div>
+                <div className="text-gray-600 dark:text-gray-300">GPA</div>
               </div>
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">50+</div>
-                <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">5+</div>
+                <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
               </div>
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <div className="text-3xl font-bold text-green-600 dark:text-green-400">20+</div>
-                <div className="text-gray-600 dark:text-gray-300">Happy Clients</div>
+                <div className="text-gray-600 dark:text-gray-300">Students Helped</div>
               </div>
               <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">15+</div>
+                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">5+</div>
                 <div className="text-gray-600 dark:text-gray-300">Technologies</div>
               </div>
             </div>
