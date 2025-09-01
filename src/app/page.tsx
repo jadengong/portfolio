@@ -1,20 +1,23 @@
-import Image from "next/image";
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
+      <Header />
       <main>
-
-        <a href="https://github.com/jadengong">
-          <Image src="/github-mark-white.png" alt="GitHub profile for jadengong" width={60} height={60}/>
-        </a>    
-
-
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
       </main>
-      <footer>
-
-      </footer>
-
+      <Footer />
     </div>
   );
 }
