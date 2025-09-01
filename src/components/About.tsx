@@ -95,6 +95,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          
 
           {/* Right Column - Experience & Education */}
           <div className="space-y-8">
