@@ -75,6 +75,49 @@ CONTACT_TO_EMAIL=your_destination_email@example.com
 
 By default, messages are sent from `Portfolio Contact <onboarding@resend.dev>` to `CONTACT_TO_EMAIL`. The reply-to is set to the sender's email from the form.
 
+## Testing the contact form
+
+1. Start the dev server:
+   ```bash
+   pnpm dev
+   ```
+   Note: If port 3000 is busy, Next.js will use another port (e.g., 3001). Check the terminal line that starts with `Local:` and use that URL.
+
+2. Open the site in your browser (replace the port if needed):
+   - `http://localhost:3000` or `http://localhost:3001`
+
+3. Go to the Contact section, fill the form, and submit.
+
+4. You should receive an email at `CONTACT_TO_EMAIL` (or the default if not set). Check Spam if not in Inbox.
+
+### Test the API directly
+
+- PowerShell (Windows):
+  ```powershell
+  Invoke-RestMethod -Method POST `
+    -Uri http://localhost:3000/api/contact `
+    -ContentType 'application/json' `
+    -Body '{"name":"Test User","email":"test@example.com","subject":"Hello","message":"This is a test."}'
+  ```
+
+- curl:
+  ```bash
+  curl -X POST http://localhost:3000/api/contact \
+    -H 'Content-Type: application/json' \
+    -d '{"name":"Test User","email":"test@example.com","subject":"Hello","message":"This is a test."}'
+  ```
+
+Replace `3000` with the actual port shown in your terminal if it differs.
+
+## Troubleshooting
+
+- Ensure `.env.local` contains `RESEND_API_KEY` (and optional `CONTACT_TO_EMAIL`).
+- Restart the dev server after changing env vars. The terminal should show `Reload env: .env.local`.
+- Check the browser Network tab: the `POST /api/contact` response should be 200.
+- Check terminal logs for any server errors.
+- If you change the "from" address, add and verify a domain in Resend.
+- Check your Spam folder; first-time emails often land there.
+
 ## Available Scripts
 
 - `pnpm dev` - Starts the development server
