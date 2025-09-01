@@ -65,11 +65,11 @@ export default function About() {
             <div className="flex justify-center mb-8">
               <div className="relative">
                 <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                  <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                    <svg className="w-20 h-20 text-gray-400 dark:text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                  </div>
+                <img
+                  src="/profile.jpg"
+                  alt="Jaden Ong"
+                  className="w-full h-full rounded-full object-cover"
+                />
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
               </div>
