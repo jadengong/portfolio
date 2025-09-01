@@ -59,6 +59,22 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The page auto-updates as you edit the files.
 
+## Contact form email setup
+
+This project uses Resend to send emails from the contact form.
+
+1. Create a Resend account and generate an API key.
+2. Create a `.env.local` file in the project root with:
+
+```
+RESEND_API_KEY=your_resend_api_key_here
+CONTACT_TO_EMAIL=your_destination_email@example.com
+```
+
+3. Restart the dev server after adding environment variables.
+
+By default, messages are sent from `Portfolio Contact <onboarding@resend.dev>` to `CONTACT_TO_EMAIL`. The reply-to is set to the sender's email from the form.
+
 ## Available Scripts
 
 - `pnpm dev` - Starts the development server

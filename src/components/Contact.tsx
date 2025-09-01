@@ -22,18 +22,26 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Show success message (you could add a toast notification here)
-    alert('Thank you for your message! I\'ll get back to you soon.');
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || 'Failed to send message');
+      }
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      alert('Thank you for your message! I\'ll get back to you soon.');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'Something went wrong';
+      alert(`Could not send message: ${message}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
