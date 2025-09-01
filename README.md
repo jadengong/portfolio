@@ -15,8 +15,14 @@ Before you begin, ensure you have the following installed on your machine:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+# If you don't have the code locally yet:
+# HTTPS
+git clone https://github.com/jadengong/portfolio.git
 cd portfolio
+
+# or SSH
+# git clone git@github.com:<your-username>/portfolio.git
+# cd portfolio
 ```
 
 ### 2. Install Dependencies
