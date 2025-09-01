@@ -47,19 +47,17 @@ export default function About() {
                 Who I Am
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                I'm a passionate developer with over 4 years of experience creating 
-                digital experiences that matter. I believe in writing clean, maintainable code 
-                and building products that users love.
+              I’m a passionate computer science student with hands-on experience building projects and 
+              learning modern development practices. I focus on writing clean, maintainable code and 
+              enjoy creating products that deliver real value to users.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                When I'm not coding, you can find me exploring new technologies, contributing 
-                to open-source projects, or sharing knowledge with the developer community. 
-                I'm always eager to learn and take on new challenges.
+                When I'm not coding, you can find me at the gym, playing video games, or watching anime.
+                I have three little parakeets that I love very much, and I'm always eager to learn, grow, and take on new challenges to
+                not only help me become a better developr, but also to help me become a better person.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                My approach combines technical expertise with creative problem-solving, 
-                ensuring that every project I work on is not only functional but also 
-                delivers an exceptional user experience.
+                I like to mix technical skills with creativity to make projects that are first useful and relevant, and second fun!
               </p>
             </div>
 
