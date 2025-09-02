@@ -38,7 +38,17 @@ export default function Projects() {
       category: "fullstack",
       github: "https://github.com/jadengong/codebox",
       featured: true
-    }
+    },
+    {
+      id: 3,
+      title: "Monopoly Board",
+      description: "A C++20 implementation of the classic Monopoly board game featuring a circular linked list, merge sort, and custom memory management.",
+      image: "/monopoly.jpg",
+      technologies: ["C++", "CMake"],
+      category: "backend",
+      github: "https://github.com/jadengong/monopoly-board",
+      featured: true
+    }    
   ];
 
   const filters = [
