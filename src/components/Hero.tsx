@@ -93,7 +93,7 @@ export default function Hero() {
               </a>
               
               <a
-                href="mailto:jaden@example.com"
+                href="mailto:ong.jadengabriel@gmail.com"
                 className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -121,7 +121,7 @@ export default function Hero() {
                     <span>developer = {`{`}</span>
                   </div>
                   <div className="ml-4 space-y-1">
-                                         <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Ong'</span>,</div>
+                    <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Ong'</span>,</div>
                     <div><span className="text-blue-500">role:</span> <span className="text-yellow-500">'Aspiring Software Developer'</span>,</div>
                     <div><span className="text-blue-500">passion:</span> <span className="text-yellow-500">'Always trying to get better'</span></div>
                   </div>
