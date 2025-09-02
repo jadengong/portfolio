@@ -47,7 +47,7 @@ export default function Projects() {
       technologies: ["C++", "CMake"],
       category: "backend",
       github: "https://github.com/jadengong/monopoly-board",
-      featured: true
+      featured: false
     }    
   ];
 
