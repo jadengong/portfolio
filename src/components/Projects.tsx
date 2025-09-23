@@ -30,7 +30,7 @@ export default function Projects() {
       id: 1,
       title: "DevTrackr",
       description: "A FastAPI and PostgreSQL-based task management API with JWT authentication, task priorities, time tracking, soft-deletes, and Dockerized deployment with GitHub Actions CI/CD.",
-      image: "/project1.jpg",
+      image: "/codebox.jpg",
       technologies: ["FastAPI", "PostgreSQL", "Docker", "GitHub Actions"],
       category: "backend",
       github: "https://github.com/jadengong/devtrackr",
@@ -50,7 +50,7 @@ export default function Projects() {
       id: 3,
       title: "Monopoly Board",
       description: "A C++20 implementation of the classic Monopoly board game featuring a circular linked list, merge sort, and custom memory management.",
-      image: "/monopoly.jpg",
+      image: "/codebox.jpg",
       technologies: ["C++", "CMake"],
       category: "backend",
       github: "https://github.com/jadengong/monopoly-board",
@@ -131,11 +131,13 @@ export default function Projects() {
             >
               {/* Project Image */}
               <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
-                  <div className="text-6xl text-gray-400 dark:text-gray-600 transition-colors duration-300 group-hover:text-blue-500">
-                    📱
-                  </div>
-                </div>
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
                 {project.featured && (
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg animate-pulse">
                     ⭐ Featured

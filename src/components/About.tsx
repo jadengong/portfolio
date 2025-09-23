@@ -54,7 +54,7 @@ export default function About() {
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 When I'm not coding, you can find me at the gym, playing video games, or watching anime.
                 I have three little parakeets that I love very much, and I'm always eager to learn, grow, and take on new challenges to
-                not only help me become a better developr, but also to help me become a better person.
+                not only help me become a better developer, but also to help me become a better person.
               </p>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
                 I like to mix technical skills with creativity to make projects that are first useful and relevant, and second fun!

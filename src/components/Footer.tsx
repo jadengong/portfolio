@@ -33,7 +33,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="mailto:jaden@example.com"
+                href="mailto:ong.jadengabriel@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

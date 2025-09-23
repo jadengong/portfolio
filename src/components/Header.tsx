@@ -52,6 +52,7 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleDarkMode}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
               className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               {isDark ? (
@@ -68,6 +69,8 @@ export default function Header() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle mobile menu"
+              aria-expanded={isMenuOpen}
               className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
               <svg className="w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -79,7 +82,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700">
+          <nav className="md:hidden py-4 border-t border-gray-200 dark:border-gray-700" aria-label="Mobile navigation">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <Link
