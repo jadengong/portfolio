@@ -136,27 +136,47 @@ Replace `3000` with the actual port shown in your terminal if it differs.
 ```
 src/
 ├── app/                 # Next.js app directory
-│   ├── layout.tsx      # Root layout component
+│   ├── layout.tsx      # Root layout with SEO and structured data
 │   ├── page.tsx        # Home page
-│   ├── globals.css     # Global styles
-│   └── fonts/          # Custom fonts
+│   ├── globals.css     # Global styles and custom animations
+│   ├── fonts/          # Custom fonts
+│   ├── resume/         # Resume page
+│   └── api/            # API routes
+│       └── contact/    # Contact form API
 ├── components/         # React components
-│   ├── About.tsx      # About section
-│   ├── Contact.tsx    # Contact section
+│   ├── About.tsx      # About section with experience timeline
+│   ├── Contact.tsx    # Contact form with validation
 │   ├── Footer.tsx     # Footer component
-│   ├── Header.tsx     # Header component
-│   ├── Hero.tsx       # Hero section
-│   ├── Projects.tsx   # Projects section
-│   └── Skills.tsx     # Skills section
+│   ├── Header.tsx     # Header with dark mode and mobile menu
+│   ├── Hero.tsx       # Hero section with animations
+│   ├── Projects.tsx   # Projects showcase with filtering
+│   └── Skills.tsx     # Skills section with categories
+└── public/            # Static assets
+    ├── profile.jpg    # Profile picture
+    ├── codebox.jpg    # Project images
+    └── resume-*.pdf   # Resume files
 ```
 
 ## Technologies Used
 
-- **Next.js 15** - React framework
+- **Next.js 15** - React framework with App Router
 - **React 19** - UI library
 - **TypeScript** - Type safety
 - **Tailwind CSS** - Utility-first CSS framework
 - **Geist Font** - Custom font family
+- **Resend** - Email service for contact form
+- **Next.js Image** - Optimized image loading
+
+## Features
+
+- **Responsive Design** - Mobile-first approach with dark mode support
+- **SEO Optimized** - Meta tags, OpenGraph, Twitter cards, and JSON-LD structured data
+- **Accessibility** - ARIA labels, semantic HTML, and keyboard navigation
+- **Contact Form** - Functional contact form with Resend email service
+- **Project Showcase** - Filterable project gallery with live demos
+- **Resume Viewer** - Dedicated resume page with PDF viewer
+- **Custom Animations** - Smooth transitions and micro-interactions
+- **Performance** - Optimized images and fast loading times
 
 ## Customization
 
