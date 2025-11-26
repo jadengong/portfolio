@@ -16,7 +16,7 @@ export default function About() {
       title: "Vice President",
       company: "App Development Club @ SDSU",
       period: "Aug 2024 - Present",
-      description: "Led technical workshops, lectures, and collaborative coding events on React, Vue.js, and Next.js, enabling 20+ members to gain hands-on experience building full-stack applications."
+      description: "Organized and led hands-on workshops and coding events covering React, Spring Boot, and Next.js, providing 20+ members with practical full-stack development experience. Supported the development and deployment of a web application for the La Jolla Open Aire Market non-profit."
     }
   ];
 
@@ -27,6 +27,13 @@ export default function About() {
       period: "2023 - 2027",
       description: "Majoring in Computer Science and minoring in Mathematics."
     }
+  ];
+
+  const achievements = [
+    "Led technical workshops for 20+ members on React, Vue.js, and Next.js",
+    "Contributed to F1TENTH autonomous racing platform with ROS 2 and Visual SLAM",
+    "Created autograders for Algorithms course to streamline grading",
+    "Integrated LiDAR and camera sensor data for autonomous vehicle perception"
   ];
 
   return (
@@ -75,23 +82,25 @@ export default function About() {
               </div>
             </div>
 
-            {/* Student Stats */}
-            <div className="grid grid-cols-2 gap-6">
-              <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">3.95</div>
-                <div className="text-gray-600 dark:text-gray-300">GPA</div>
-              </div>
-              <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">5+</div>
-                <div className="text-gray-600 dark:text-gray-300">Projects Built</div>
-              </div>
-              <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400">60+</div>
-                <div className="text-gray-600 dark:text-gray-300">Students Helped</div>
-              </div>
-              <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-3xl font-bold text-orange-600 dark:text-orange-400">5+</div>
-                <div className="text-gray-600 dark:text-gray-300">Technologies</div>
+            {/* Key Achievements */}
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+                Key Achievements
+              </h3>
+              <div className="space-y-4">
+                {achievements.map((achievement, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    <div className="flex-shrink-0 mt-1 mr-4">
+                      <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600"></div>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {achievement}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
