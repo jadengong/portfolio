@@ -11,7 +11,6 @@ type Project = {
   technologies: string[];
   category: 'frontend' | 'backend' | 'fullstack' | string;
   github: string;
-  featured: boolean;
   live?: string;
 };
 
@@ -30,11 +29,10 @@ export default function Projects() {
       id: 1,
       title: "DevTrackr",
       description: "A FastAPI and PostgreSQL-based task management API with JWT authentication, task priorities, time tracking, soft-deletes, and Dockerized deployment with GitHub Actions CI/CD.",
-      image: "/codebox.jpg",
+      image: "/devtrackr.jpg",
       technologies: ["FastAPI", "PostgreSQL", "Docker", "GitHub Actions"],
       category: "backend",
-      github: "https://github.com/jadengong/devtrackr",
-      featured: true
+      github: "https://github.com/jadengong/devtrackr"
     },
     {
       id: 2,
@@ -43,19 +41,44 @@ export default function Projects() {
       image: "/codebox.jpg",
       technologies: ["React", "Node.js", "Express", "Docker"],
       category: "fullstack",
-      github: "https://github.com/jadengong/codebox",
-      featured: true
+      github: "https://github.com/jadengong/codebox"
     },
     {
       id: 3,
       title: "Monopoly Board",
       description: "A C++20 implementation of the classic Monopoly board game featuring a circular linked list, merge sort, and custom memory management.",
-      image: "/codebox.jpg",
+      image: "/monopoly-board.jpg",
       technologies: ["C++", "CMake"],
       category: "backend",
-      github: "https://github.com/jadengong/monopoly-board",
-      featured: false
-    }    
+      github: "https://github.com/jadengong/monopoly-board"
+    },
+    {
+      id: 4,
+      title: "The Crash App",
+      description: "Add your project description here. This is a placeholder for your next project.",
+      image: "/project4.jpg",
+      technologies: ["Technology 1", "Technology 2"],
+      category: "fullstack",
+      github: "https://github.com/jadengong/project4"
+    },
+    {
+      id: 5,
+      title: "PrepPal",
+      description: "Add your project description here. This is a placeholder for your next project.",
+      image: "/project5.jpg",
+      technologies: ["Technology 1", "Technology 2"],
+      category: "frontend",
+      github: "https://github.com/jadengong/project5"
+    },
+    {
+      id: 6,
+      title: "AlgoCoach",
+      description: "Add your project description here. This is a placeholder for your next project.",
+      image: "/project6.jpg",
+      technologies: ["Technology 1", "Technology 2"],
+      category: "backend",
+      github: "https://github.com/jadengong/project6"
+    }
   ];
 
   useEffect(() => {
@@ -138,11 +161,6 @@ export default function Projects() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                {project.featured && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-medium shadow-lg animate-pulse">
-                    ⭐ Featured
-                  </div>
-                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
