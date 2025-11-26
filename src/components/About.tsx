@@ -4,13 +4,13 @@ export default function About() {
       title: "Research Assistant",
       company: "RTEC Lab @ SDSU",
       period: "Feb 2025 - Present",
-      description: "Conducting research in real-time embedded systems and autonomous vehicles as part of SDSU’s RTEC Lab. Worked on the F1TENTH autonomous racing platform to develop and test algorithms for intelligent following, static obstacle overtaking, and real-time path planning using ROS 2 and NVIDIA Isaac ROS Visual SLAM. Integrated sensor data (LiDAR, cameras) for perception and localization, and contributed to control system tuning."
+      description: "Conducting research as part of the Real-Time Embedded and Controls Lab (RTEC) at SDSU. Worked on the F1TENTH autonomous racing platform to develop and test algorithms for intelligent following, static obstacle overtaking, and real-time path planning using ROS 2 and NVIDIA Isaac ROS Visual SLAM. Integrated sensor data (LiDAR, cameras) for perception and localization, and contributed to control system tuning."
     },
     {
       title: "Algorithms Instructional Student Assistant",
       company: "San Diego State University",
       period: "Aug 2025 - Present", 
-      description: "Assisting students in the Algorithms (CS460) course by holding office hours, grading assignments and exams."
+      description: "Assisting students in the Algorithms (CS460) course by grading exams/assignments, creating autograders, and answering questions."
     },
     {
       title: "Vice President",
@@ -25,7 +25,7 @@ export default function About() {
       degree: "Bachelor of Computer Science",
       school: "San Diego State University",
       period: "2023 - 2027",
-      description: "Majoring in Computer Science and minoring in Information Systems."
+      description: "Majoring in Computer Science and minoring in Mathematics."
     }
   ];
 
