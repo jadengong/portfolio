@@ -19,6 +19,7 @@ export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [isFiltering, setIsFiltering] = useState(false);
+  const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     setIsVisible(true);
@@ -55,19 +56,19 @@ export default function Projects() {
     {
       id: 4,
       title: "The Crash App",
-      description: "Add your project description here. This is a placeholder for your next project.",
-      image: "/project4.jpg",
-      technologies: ["Technology 1", "Technology 2"],
+      description: "A Next.js/TypeScript hit-and-run reporting app with image uploads, license plate tracking, and verification workflows. Includes a reward system to incentivize accurate reporting and community engagement.",
+      image: "/crashapp.jpg",
+      technologies: ["Next.js", "Tailwind CSS", "React.js", "Python"],
       category: "fullstack",
-      github: "https://github.com/jadengong/project4"
+      github: "https://github.com/alexziao05/innovate-4-sdsu-hackathon-2025"
     },
     {
       id: 5,
-      title: "PrepPal",
-      description: "Add your project description here. This is a placeholder for your next project.",
-      image: "/project5.jpg",
-      technologies: ["Technology 1", "Technology 2"],
-      category: "frontend",
+      title: "PrepPal", 
+      description: "A full-stack AI interview coach using Next.js, FastAPI, and AWS S3/DynamoDB/Bedrock. It provides personalized interview preparation, feedback, and resources to help users prepare for their next job interview.",
+      image: "/preppal.jpg",
+      technologies: ["AWS", "FastAPI",],
+      category: "fullstack",
       github: "https://github.com/jadengong/project5"
     },
     {
@@ -169,9 +170,27 @@ export default function Projects() {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3 leading-relaxed">
-                  {project.description}
-                </p>
+                <div className="mb-4">
+                  <p className={`text-gray-600 dark:text-gray-300 text-sm leading-relaxed ${expandedDescriptions.has(project.id) ? '' : 'line-clamp-3'}`}>
+                    {project.description}
+                  </p>
+                  {project.description.length > 150 && (
+                    <button
+                      onClick={() => {
+                        const newExpanded = new Set(expandedDescriptions);
+                        if (newExpanded.has(project.id)) {
+                          newExpanded.delete(project.id);
+                        } else {
+                          newExpanded.add(project.id);
+                        }
+                        setExpandedDescriptions(newExpanded);
+                      }}
+                      className="text-blue-600 dark:text-blue-400 hover:underline mt-1 text-xs font-medium transition-colors"
+                    >
+                      {expandedDescriptions.has(project.id) ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
