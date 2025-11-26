@@ -73,19 +73,22 @@ export default function About() {
 
             {/* Profile Picture */}
             <div className="flex justify-center mb-8">
-              <div className="relative">
-                <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
+              <div className="relative group">
+                <div className="w-56 h-56 relative overflow-hidden">
                   <Image
                     src="/profile.jpg"
                     alt="Jaden Ong"
-                    width={192}
-                    height={192}
-                    className="w-full h-full rounded-full object-cover"
+                    width={224}
+                    height={224}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     quality={95}
                     priority
                   />
+                  <div className="absolute inset-0 border-4 border-white dark:border-gray-800 shadow-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 via-purple-600/0 to-pink-600/0 group-hover:from-blue-600/20 group-hover:via-purple-600/20 group-hover:to-pink-600/20 transition-all duration-500"></div>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+                <div className="absolute -inset-4 border-2 border-blue-400/30 dark:border-purple-400/30 transform rotate-6 group-hover:rotate-12 transition-transform duration-500"></div>
+                <div className="absolute -inset-4 border-2 border-purple-400/30 dark:border-blue-400/30 transform -rotate-6 group-hover:-rotate-12 transition-transform duration-500"></div>
               </div>
             </div>
 
