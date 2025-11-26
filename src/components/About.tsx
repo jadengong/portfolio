@@ -30,10 +30,11 @@ export default function About() {
   ];
 
   const achievements = [
-    "Led technical workshops for 20+ members on React, Vue.js, and Next.js",
-    "Contributed to F1TENTH autonomous racing platform with ROS 2 and Visual SLAM",
-    "Created autograders for Algorithms course to streamline grading",
-    "Integrated LiDAR and camera sensor data for autonomous vehicle perception"
+    "Built C++ localization systems for autonomous vehicles, improving lap times by 15% over 100+ runs",
+    "Led technical workshops for 20+ members on Git, React, Vue, Next.js, and Spring in full-stack development",
+    "Reduced manual grading by 30% by creating automated grading system test cases for 100+ assignments",
+    "Led 15+ members in building a non-profit farmers market website with authentication, database, and payments",
+    "Developed a full-stack AI interview coach (PrepPal) using Next.js, FastAPI, and AWS S3/DynamoDB/Bedrock"
   ];
 
   return (
