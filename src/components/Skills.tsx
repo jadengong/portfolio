@@ -77,14 +77,14 @@ export default function Skills() {
             Other Skills & Interests
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             {[
               "Communication", "Performance Optimization",  "Testing", "Problem Solving",  "Team Collaboration",
               "Code Review", "Documentation", "Continuous Adaptability & Learning"
             ].map((skill, index) => (
               <div
                 key={index}
-                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 text-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 text-center hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors w-[calc(50%-0.5rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(16.666%-0.833rem)]"
               >
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                   {skill}
