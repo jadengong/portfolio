@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   const experiences = [
     {
@@ -73,11 +75,15 @@ export default function About() {
             <div className="flex justify-center mb-8">
               <div className="relative">
                 <div className="w-48 h-48 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1">
-                <img
-                  src="/profile.jpg"
-                  alt="Jaden Ong"
-                  className="w-full h-full rounded-full object-cover"
-                />
+                  <Image
+                    src="/profile.jpg"
+                    alt="Jaden Ong"
+                    width={192}
+                    height={192}
+                    className="w-full h-full rounded-full object-cover"
+                    quality={95}
+                    priority
+                  />
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white dark:border-gray-900"></div>
               </div>
