@@ -117,15 +117,14 @@ export default function Hero() {
               <div className="absolute top-16 left-16 text-sm text-gray-600 dark:text-gray-300 font-mono">
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2">
-                    <span className="text-green-500">const</span>
                     <span>developer = {`{`}</span>
                   </div>
                   <div className="ml-4 space-y-1">
-                    <div><span className="text-blue-500">name:</span> <span className="text-yellow-500">'Jaden Ong'</span>,</div>
-                    <div><span className="text-blue-500">role:</span> <span className="text-yellow-500">'Aspiring Software Developer'</span>,</div>
-                    <div><span className="text-blue-500">passion:</span> <span className="text-yellow-500">'Always trying to get better'</span></div>
+                    <div><span className="text-blue-500">'name'</span>: <span className="text-yellow-500">'Jaden Ong'</span>,</div>
+                    <div><span className="text-blue-500">'role'</span>: <span className="text-yellow-500">'Aspiring Software Developer'</span>,</div>
+                    <div><span className="text-blue-500">'passion'</span>: <span className="text-yellow-500">'Always trying to get better'</span></div>
                   </div>
-                  <div>{`}`};</div>
+                  <div>{`}`}</div>
                 </div>
               </div>
             </div>
