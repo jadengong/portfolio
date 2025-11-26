@@ -62,7 +62,9 @@ export default function Projects() {
       image: "/crashapp.jpg",
       technologies: ["Next.js", "Tailwind CSS", "React.js", "Python"],
       category: "fullstack",
-      github: "https://github.com/alexziao05/innovate-4-sdsu-hackathon-2025"
+      github: "https://github.com/alexziao05/innovate-4-sdsu-hackathon-2025",
+      slides: "https://docs.google.com/presentation/d/1KfXnKUpl9hLCzp95O8mRHshecNZSj9pj5EF9j08w97s/edit",
+      demo: "/TheCrashAppDemo.mp4"
     },
     {
       id: 5,
