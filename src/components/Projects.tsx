@@ -114,7 +114,7 @@ export default function Projects() {
             Selected work
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed max-w-prose">
-            A few projects that represent the kinds of problems I like working on—systems, developer
+            A few projects that represent the kinds of problems I like working on - systems, developer
             tooling, and product-facing features.
           </p>
           <div className="mt-6 section-rule" />
