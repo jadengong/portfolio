@@ -129,7 +129,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <dt className="text-gray-500 dark:text-gray-400">Interested in</dt>
-                    <dd className="mt-1 text-gray-950 dark:text-gray-50">Backend, tooling, product</dd>
+                    <dd className="mt-1 text-gray-950 dark:text-gray-50">Backend, full-cycle, systems</dd>
                   </div>
                 </dl>
               </div>
