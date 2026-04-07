@@ -18,14 +18,9 @@ type Project = {
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [isVisible, setIsVisible] = useState(false);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const [isFiltering, setIsFiltering] = useState(false);
   const [expandedDescriptions, setExpandedDescriptions] = useState<Set<number>>(new Set());
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const projects: Project[] = [
     {
@@ -109,39 +104,33 @@ export default function Projects() {
   ];
 
   return (
-    <section 
-      id="projects" 
-      className={`py-20 bg-gray-50 dark:bg-gray-800 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
+    <section id="projects" className="py-24 bg-white dark:bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            My Projects
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each project represents a unique challenge 
-            and showcases different aspects of my development skills.
+        <header className="mb-10 max-w-3xl">
+          <p className="text-sm tracking-wide uppercase text-gray-500 dark:text-gray-400">
+            Projects
           </p>
-        </div>
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold tracking-tight text-gray-950 dark:text-gray-50">
+            Selected work
+          </h2>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 leading-relaxed max-w-prose">
+            A few projects that represent the kinds of problems I like working on—systems, developer
+            tooling, and product-facing features.
+          </p>
+          <div className="mt-6 section-rule" />
+        </header>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap gap-2 mb-10">
           {filters.map((filter, index) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-500 ease-out transform hover:scale-105 ${
+              className={`quiet-focus px-3 py-1.5 rounded-full text-sm transition border ${
                 activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
-                  : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600 hover:shadow-md'
+                  ? 'bg-gray-900 text-white border-gray-900 dark:bg-gray-50 dark:text-gray-950 dark:border-gray-50'
+                  : 'bg-transparent text-gray-700 dark:text-gray-300 border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5'
               }`}
-              style={{
-                animationDelay: `${index * 100}ms`,
-                animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
-              }}
             >
               {filter.name}
             </button>
@@ -149,31 +138,26 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300 ${isFiltering ? 'opacity-50' : 'opacity-100'}`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-200 ${isFiltering ? 'opacity-70' : 'opacity-100'}`}>
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:-translate-y-3 hover:scale-105 group"
-              style={{
-                animationDelay: `${index * 150}ms`,
-                animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none'
-              }}
+              className="bg-white dark:bg-gray-950 rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 transition-colors duration-200 group"
             >
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 overflow-hidden">
+              <div className="relative h-44 overflow-hidden bg-black/[0.02] dark:bg-white/[0.03]">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                <h3 className="text-lg font-medium tracking-tight text-gray-950 dark:text-gray-50 mb-2">
                   {project.title}
                 </h3>
                 <div className="mb-4">
@@ -191,7 +175,7 @@ export default function Projects() {
                         }
                         setExpandedDescriptions(newExpanded);
                       }}
-                      className="text-blue-600 dark:text-blue-400 hover:underline mt-1 text-xs font-medium transition-colors"
+                      className="quiet-focus text-gray-950 dark:text-gray-50 underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:decoration-black/60 dark:hover:decoration-white/60 mt-2 text-xs"
                     >
                       {expandedDescriptions.has(project.id) ? 'Show less' : 'Read more'}
                     </button>
@@ -203,11 +187,7 @@ export default function Projects() {
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded-full transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300 hover:scale-105"
-                      style={{
-                        animationDelay: `${index * 50}ms`,
-                        animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none'
-                      }}
+                      className="px-2.5 py-1 bg-transparent border border-black/10 dark:border-white/10 text-gray-700 dark:text-gray-300 text-xs rounded-full"
                     >
                       {tech}
                     </span>
@@ -220,7 +200,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 min-w-[120px] bg-gray-900 dark:bg-gray-700 text-white text-center py-2 px-4 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-all duration-300 text-sm font-medium transform hover:scale-105 hover:shadow-lg group/link"
+                    className="quiet-focus flex-1 min-w-[120px] border border-black/10 dark:border-white/10 text-gray-950 dark:text-gray-50 text-center py-2 px-4 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 text-sm font-medium"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -234,7 +214,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 min-w-[120px] bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium transform hover:scale-105 hover:shadow-lg group/link"
+                      className="quiet-focus flex-1 min-w-[120px] border border-black/10 dark:border-white/10 text-gray-950 dark:text-gray-50 text-center py-2 px-4 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 text-sm font-medium"
                     >
                       <span className="flex items-center justify-center gap-2">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,7 +229,7 @@ export default function Projects() {
                       href={project.slides}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 min-w-[120px] bg-gradient-to-r from-green-600 to-emerald-600 text-white text-center py-2 px-4 rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 text-sm font-medium transform hover:scale-105 hover:shadow-lg group/link"
+                      className="quiet-focus flex-1 min-w-[120px] border border-black/10 dark:border-white/10 text-gray-950 dark:text-gray-50 text-center py-2 px-4 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 text-sm font-medium"
                     >
                       <span className="flex items-center justify-center gap-2">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -264,7 +244,7 @@ export default function Projects() {
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 min-w-[120px] bg-gradient-to-r from-red-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 text-sm font-medium transform hover:scale-105 hover:shadow-lg group/link"
+                      className="quiet-focus flex-1 min-w-[120px] border border-black/10 dark:border-white/10 text-gray-950 dark:text-gray-50 text-center py-2 px-4 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200 text-sm font-medium"
                     >
                       <span className="flex items-center justify-center gap-2">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -282,40 +262,20 @@ export default function Projects() {
         </div>
 
         {/* View More Button */}
-        <div className="text-center mt-12">
+        <div className="mt-12">
           <a
             href="https://github.com/jadengong"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-gray-700 dark:text-gray-300 border-2 border-gray-300 dark:border-gray-600 rounded-lg hover:border-blue-500 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-500 transform hover:scale-105 hover:shadow-lg group"
-            style={{
-              animationDelay: '600ms',
-              animation: isVisible ? 'fadeInUp 0.8s ease-out forwards' : 'none'
-            }}
+            className="quiet-focus inline-flex items-center gap-2 text-gray-950 dark:text-gray-50 underline underline-offset-4 decoration-black/30 dark:decoration-white/30 hover:decoration-black/60 dark:hover:decoration-white/60 transition"
           >
-            <span className="flex items-center gap-2">
-              View More on GitHub
-              <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            </span>
+            View more on GitHub
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
       </div>
-      
-      {/* CSS Animations */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }
