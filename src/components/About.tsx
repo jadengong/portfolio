@@ -24,11 +24,18 @@ export default function About() {
         "Built C++ localization systems for autonomous vehicles, improving lap times by 15% over 100+ runs. Replaced LiDAR-based AMCL with Isaac ROS vSLAM to reduce sensor cost while maintaining localization, and integrated object detection to classify dynamic obstacles on the F1TENTH platform."
     },
     {
-      title: "Instructional Student Assistant",
+      title: "Operating Systems Instructional Student Assistant",
+      company: "San Diego State University",
+      period: "Dec 2025 - Present",
+      description:
+        "Graded C/C++ assignments and exams for a ~150-student operating systems course. Maintained automated grading scripts and held office hours to support students with C/C++ debugging and core OS concepts."
+    },
+    {
+      title: "Algorithms Instructional Student Assistant",
       company: "San Diego State University",
       period: "Aug 2025 - Present",
       description:
-        "Graded 250+ Python and C/C++ submissions for algorithms and operating systems courses with actionable feedback. Built CLI testing scripts and automated grading workflows (30% less manual grading) and supported 150+ students via office hours on C/C++ debugging, OS concepts, and algorithms."
+        "Graded Python assignments, homework, and exams for a ~80-student algorithms course. Designed an extra-credit coding exam (graphs, dynamic programming, and search algorithms like BFS/DFS) and helped maintain the automated grading workflow."
     },
     {
       title: "Vice President",
@@ -46,14 +53,6 @@ export default function About() {
       period: "2023 - 2027",
       description: "Majoring in Computer Science and minoring in Mathematics."
     }
-  ];
-
-  const achievements = [
-    "Built C++ localization systems for autonomous vehicles, improving lap times by 15% over 100+ runs",
-    "Led technical workshops for 20+ members on Git, React, Vue, Next.js, and Spring in full-stack development",
-    "Reduced manual grading by 30% by creating automated grading system test cases for 100+ assignments",
-    "Led 15+ members in building a non-profit farmers market website with authentication, database, and payments",
-    "Developed a full-stack AI interview coach (PrepPal) using Next.js, FastAPI, and AWS S3/DynamoDB/Bedrock"
   ];
 
   return (
@@ -105,26 +104,6 @@ export default function About() {
                     priority
                   />
                 </div>
-              </div>
-            </div>
-
-            {/* Key Achievements */}
-            <div>
-              <h3 className="text-xl font-medium text-gray-950 dark:text-gray-50 mb-6 tracking-tight">
-                Key Achievements
-              </h3>
-              <div className="space-y-3">
-                {achievements.map((achievement, index) => (
-                  <div 
-                    key={index} 
-                    className="flex items-start gap-3 p-4 rounded-xl border border-black/10 dark:border-white/10 bg-white dark:bg-gray-950"
-                  >
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      <span className="text-gray-400 dark:text-gray-500 mr-2">—</span>
-                      {achievement}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
