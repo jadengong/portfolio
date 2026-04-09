@@ -19,8 +19,8 @@ export default function Hero() {
                 Jaden Ong
               </h1>
               <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 max-w-2xl">
-                Computer science student building projects and sharpening fundamentals. I’m especially
-                interested in backend, full-cycle engineering, and systems.
+                Computer science student learning by building. Most interested in backend, full-cycle
+                engineering, and systems.
               </p>
             </div>
 
